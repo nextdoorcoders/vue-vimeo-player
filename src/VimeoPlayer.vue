@@ -46,6 +46,10 @@ export default {
       type: Number,
       default: 640
     },
+    relative: {
+      type: Number,
+      default: 1
+    },
     options: {
       type: Object,
       default: () => ({})

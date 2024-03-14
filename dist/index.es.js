@@ -22,6 +22,10 @@ var script = {
       type: Number,
       "default": 640
     },
+    responsive: {
+      type: Number,
+      "default": 0
+    },
     options: {
       type: Object,
       "default": function _default() {
@@ -74,6 +78,7 @@ var script = {
       var opts = {
         width: props.playerWidth,
         height: props.playerHeight,
+        responsive: props.responsive,
         loop: props.loop,
         autoplay: props.autoplay,
         controls: props.controls
