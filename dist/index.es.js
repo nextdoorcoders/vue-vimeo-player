@@ -44,6 +44,10 @@ var script = {
       type: Boolean,
       "default": false
     },
+    muted: {
+      type: Boolean,
+      "default": false
+    },
     autoplay: {
       type: Boolean,
       "default": false
@@ -79,6 +83,7 @@ var script = {
         width: props.playerWidth,
         height: props.playerHeight,
         responsive: props.responsive,
+        muted: props.muted,
         loop: props.loop,
         autoplay: props.autoplay,
         controls: props.controls

@@ -46,9 +46,9 @@ export default {
       type: Number,
       default: 640
     },
-    relative: {
+    responsive: {
       type: Number,
-      default: 1
+      default: 0
     },
     options: {
       type: Object,
@@ -61,6 +61,10 @@ export default {
     videoUrl: {
       type: String,
       default: ''
+    },
+    muted: {
+      type: Boolean,
+      default: false
     },
     loop: {
       type: Boolean,
@@ -90,6 +94,8 @@ export default {
       const opts = {
         width: props.playerWidth,
         height: props.playerHeight,
+        responsive: props.responsive,
+        muted: props.muted,
         loop: props.loop,
         autoplay: props.autoplay,
         controls: props.controls
