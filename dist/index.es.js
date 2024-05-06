@@ -112,6 +112,11 @@ var script = {
       return player.setVolume(0);
     };
 
+    var time = function time() {
+      var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      return player.setCurrentTime(time);
+    };
+
     var unmute = function unmute() {
       var volume = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
       return player.setVolume(volume);
@@ -170,6 +175,7 @@ var script = {
       play: play,
       pause: pause,
       mute: mute,
+      time: time,
       unmute: unmute,
       elementRef: elementRef,
       player: player

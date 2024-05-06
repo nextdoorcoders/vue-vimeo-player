@@ -112,6 +112,7 @@ export default {
     const play = () => player.play()
     const pause = () => player.pause()
     const mute = () => player.setVolume(0)
+    const time = (time = 0) => player.setCurrentTime(time)
     const unmute = (volume = 0.5) => player.setVolume(volume)
 
     const setEvents = () => {
@@ -139,7 +140,7 @@ export default {
     const update = (id) => player.loadVideo(mergeOptions({ id }))
 
     return {
-      update, play, pause, mute, unmute, elementRef, player
+      update, play, pause, mute, time, unmute, elementRef, player
     }
   }
 }
